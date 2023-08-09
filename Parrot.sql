@@ -12,7 +12,7 @@ CREATE TABLE Formulaires(
 );
 CREATE TABLE Validations(
     Id_Validations INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    valider VARCHAR(3)
+    valider CHAR(3)
 );
 CREATE TABLE Jours(
     Id_Jours INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -35,7 +35,7 @@ CREATE TABLE Modeles(
 );
 CREATE TABLE Energies(
     Id_Energies INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    energie VARCHAR(25)
+    energie VARCHAR(25) NOT NULL
 );
 CREATE TABLE Options(
     Id_Options INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -47,16 +47,13 @@ CREATE TABLE Utilisateurs(
     prenom VARCHAR(50),
     mail VARCHAR(50) NOT NULL,
     mdp CHAR(60) NOT NULL,
-    Id_Formulaires INT,
     Id_Roles INT NOT NULL,
-    FOREIGN KEY(Id_Formulaires) REFERENCES Formulaires(Id_Formulaires),
-    FOREIGN KEY(Id_Services) REFERENCES Services(Id_Services),
     FOREIGN KEY(Id_Roles) REFERENCES Roles(Id_Roles)
 );
 CREATE TABLE Services(
     Id_Services INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     titre VARCHAR(50),
-    description TEXT
+    description TEXT,
     Id_Utilisateurs INT NOT NULL,
     FOREIGN KEY(Id_Utilisateurs) REFERENCES Utilisateurs(Id_Utilisateurs)
 );
@@ -89,8 +86,17 @@ CREATE TABLE Annonces(
     titre VARCHAR(50) NOT NULL,
     date_publication DATE,
     Id_Voitures INT NOT NULL,
+    UNIQUE(Id_Voitures),
     FOREIGN KEY(Id_Voitures) REFERENCES Voitures(Id_Voitures)
 );
+CREATE TABLE gerer(
+    Id_Utilisateurs INT,
+    Id_Formulaires INT,
+    PRIMARY KEY(Id_Utilisateurs, Id_Formulaires),
+    FOREIGN KEY(Id_Utilisateurs) REFERENCES Utilisateurs(Id_Utilisateurs),
+    FOREIGN KEY(Id_Formulaires) REFERENCES Formulaires(Id_Formulaires)
+);
+
 CREATE TABLE poster(
     Id_Utilisateurs INT,
     Id_Avis INT,

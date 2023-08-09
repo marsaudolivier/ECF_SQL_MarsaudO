@@ -1,6 +1,12 @@
 INSERT INTO Roles(role) VALUES ('Administrateur');
 INSERT INTO Roles(role) VALUES ('Employé');
 
+INSERT INTO Utilisateurs(nom, prenom, mail, mdp, Id_Roles) VALUES ('Parrot', 'Vincent', "garageparot@mail.fr", "012345678901234567890123456789012345678901234567890123456789", 1)
+
+
+
+
+
 INSERT INTO Services(titre, description) VALUES ('Réparation Automobile', "Chez Garage V. Parrot, nous sommes fiers de notre expertise en matière de réparation automobile. Nous avons une équipe de professionnels expérimentés qui sont formés pour travailler sur tous les types de voitures, des plus anciennes aux plus récentes. Nous sommes équipés des dernières technologies et des outils les plus performants pour garantir un travail de qualité et une réparation rapide et efficace.
 
 Nous comprenons que la réparation d'une voiture peut être stressante et coûteuse. C'est pourquoi nous offrons à nos clients un service personnalisé et transparent, avec des devis clairs et des explications détaillées sur les travaux à effectuer. Nous sommes également à l'écoute de nos clients et nous nous engageons à répondre à toutes leurs questions et à leurs préoccupations.
