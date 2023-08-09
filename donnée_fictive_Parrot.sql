@@ -40,3 +40,11 @@ INSERT INTO Heures(ouverture, fermeture) VALUES ("14h","18h");
 INSERT INTO Heures(ouverture, fermeture) VALUES ("9h","12h");
 INSERT INTO Heures(ouverture, fermeture) VALUES ("15h","19h");
 INSERT INTO Heures(ouverture, fermeture) VALUES ("fermé","fermé");
+
+INSERT INTO Jours(jour) VALUES ("Lundi");
+INSERT INTO Jours(jour) VALUES ("Mardi");
+INSERT INTO Jours(jour) VALUES ("Mercredi");
+INSERT INTO Jours(jour) VALUES ("Jeudi");
+INSERT INTO Jours(jour) VALUES ("Vendredi");
+INSERT INTO Jours(jour) VALUES ("Samedi");
+INSERT INTO Jours(jour) VALUES ("Dimanche");
