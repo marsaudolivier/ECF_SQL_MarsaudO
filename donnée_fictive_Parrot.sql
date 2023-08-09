@@ -165,3 +165,9 @@ INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsa
 INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsaud', "Aurélie", "Test", "3", 1);
 
 INSERT INTO Formulaires(nom, prenom, mail, telephone, message) VALUES ("Pouplin", "Joseph", "jojo@hotmail.com", "0600000000", "Pouvez vous me contacter pour un entretien sur une 2008");
+
+INSERT INTO Motifs (motif) VALUES ("Mécanique auto");
+INSERT INTO Motifs (motif) VALUES ("Carrosserie");
+INSERT INTO Motifs (motif) VALUES ("Peinture");
+INSERT INTO Motifs (motif) VALUES ("Vehicule à vendre");
+INSERT INTO Motifs (motif) VALUES ("Autre");

@@ -2,13 +2,19 @@ CREATE TABLE Roles(
    Id_Roles INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
    role VARCHAR(14) NOT NULL
 );
+CREATE TABLE Motifs(
+    Id_Motifs INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    motif VARCHAR(50) NOT NULL
+);
 CREATE TABLE Formulaires(
     Id_Formulaires INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL,
     prenom VARCHAR(50) NOT NULL,
     mail VARCHAR(50),
     telephone VARCHAR(13),
-    message TEXT NOT NULL
+    message TEXT NOT NULL,
+    Id_Motifs INT NOT NULL,
+    FOREIGN KEY(Id_Motifs) REFERENCES Motifs(Id_Motifs)
 );
 CREATE TABLE Validations(
     Id_Validations INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -131,8 +137,4 @@ CREATE TABLE avoir(
     PRIMARY KEY(Id_Modeles, Id_Options),
     FOREIGN KEY(Id_Modeles) REFERENCES Modeles(Id_Modeles),
     FOREIGN KEY(Id_Options) REFERENCES Options(Id_Options)
-);
-CREATE TABLE Motifs(
-    Id_Motifs INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    motif VARCHAR(50) NOT NULL
 );
