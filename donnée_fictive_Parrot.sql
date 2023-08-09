@@ -83,3 +83,10 @@ INSERT INTO Marques(marque) VALUES ("Lexus");
 INSERT INTO Marques(marque) VALUES ("Smart");
 INSERT INTO Marques(marque) VALUES ("Subaru");
 INSERT INTO Marques(marque) VALUES ("Jaguar");
+
+INSERT INTO Energies(energie) VALUES ("essence");
+INSERT INTO Energies(energie) VALUES ("diesel");
+INSERT INTO Energies(energie) VALUES ("électrique");
+INSERT INTO Energies(energie) VALUES ("hybride");
+INSERT INTO Energies(energie) VALUES ("GPL");
+INSERT INTO Energies(energie) VALUES ("bioéthanol");
