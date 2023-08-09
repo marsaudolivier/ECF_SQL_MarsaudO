@@ -1,5 +1,3 @@
-INSERT INTO Roles(role) VALUES ('Administrateur');
-INSERT INTO Roles(role) VALUES ('Employé');
 INSERT INTO Services(Id_Utilisateurs, titre, description) VALUES (1,'Réparation Automobile', "Chez Garage V. Parrot, nous sommes fiers de notre expertise en matière de réparation automobile. Nous avons une équipe de professionnels expérimentés qui sont formés pour travailler sur tous les types de voitures, des plus anciennes aux plus récentes. Nous sommes équipés des dernières technologies et des outils les plus performants pour garantir un travail de qualité et une réparation rapide et efficace.
 
 Nous comprenons que la réparation d'une voiture peut être stressante et coûteuse. C'est pourquoi nous offrons à nos clients un service personnalisé et transparent, avec des devis clairs et des explications détaillées sur les travaux à effectuer. Nous sommes également à l'écoute de nos clients et nous nous engageons à répondre à toutes leurs questions et à leurs préoccupations.
@@ -164,10 +162,10 @@ INSERT INTO Photos (photo_secondaire, Id_Voitures) VALUES ("uneURLSECONDAIRE", 1
 INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsaud', "Olivier", "Très bon garage je recommande", "5", 2);
 INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsaud', "Aurélie", "Test", "3", 1);
 
-INSERT INTO Formulaires(nom, prenom, mail, telephone, message) VALUES ("Pouplin", "Joseph", "jojo@hotmail.com", "0600000000", "Pouvez vous me contacter pour un entretien sur une 2008");
-
 INSERT INTO Motifs (motif) VALUES ("Mécanique auto");
 INSERT INTO Motifs (motif) VALUES ("Carrosserie");
 INSERT INTO Motifs (motif) VALUES ("Peinture");
 INSERT INTO Motifs (motif) VALUES ("Vehicule à vendre");
 INSERT INTO Motifs (motif) VALUES ("Autre");
+
+INSERT INTO Formulaires(nom, prenom, mail, telephone, message, Id_Motifs) VALUES ("Pouplin", "Joseph", "jojo@hotmail.com", "0600000000", "Pouvez vous me contacter pour un entretien sur une 2008", 1);
