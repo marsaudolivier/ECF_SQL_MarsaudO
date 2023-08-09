@@ -163,3 +163,5 @@ INSERT INTO Photos (photo_secondaire, Id_Voitures) VALUES ("uneURLSECONDAIRE", 1
 
 INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsaud', "Olivier", "Très bon garage je recommande", "5", 2);
 INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsaud', "Aurélie", "Test", "3", 1);
+
+INSERT INTO Formulaires(nom, prenom, mail, telephone, message) VALUES ("Pouplin", "Joseph", "jojo@hotmail.com", "0600000000", "Pouvez vous me contacter pour un entretien sur une 2008");

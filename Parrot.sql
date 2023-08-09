@@ -131,4 +131,8 @@ CREATE TABLE avoir(
     PRIMARY KEY(Id_Modeles, Id_Options),
     FOREIGN KEY(Id_Modeles) REFERENCES Modeles(Id_Modeles),
     FOREIGN KEY(Id_Options) REFERENCES Options(Id_Options)
-)
+);
+CREATE TABLE Motifs(
+    Id_Motifs INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    motif VARCHAR(50) NOT NULL
+);
