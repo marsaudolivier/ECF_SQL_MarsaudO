@@ -160,3 +160,6 @@ INSERT INTO Annonces (titre, date_publication, Id_Voitures) VALUES ("Renault cli
 INSERT INTO publier (Id_Utilisateurs, Id_Annonces) VALUES (1 , 1);
 
 INSERT INTO Photos (photo_secondaire, Id_Voitures) VALUES ("uneURLSECONDAIRE", 1);
+
+INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsaud', "Olivier", "Très bon garage je recommande", "5", 2);
+INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsaud', "Aurélie", "Test", "3", 1);
