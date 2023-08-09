@@ -147,3 +147,10 @@ INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, ID_marques) VALU
 
 INSERT INTO consommer(Id_Modeles, Id_Energies) VALUES (1,1);
 INSERT INTO consommer(Id_Modeles, Id_Energies) VALUES (1,2);
+
+INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,1);
+INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,2);
+INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,3);
+INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,4);
+INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,5);
+INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,6);
