@@ -140,3 +140,7 @@ INSERT INTO Options(optionn) VALUES ("Sièges semi-cuir");;
 INSERT INTO Options(optionn) VALUES ("Volant en cuir");
 INSERT INTO Options(optionn) VALUES ("Volant chauffant");
 INSERT INTO Options(optionn) VALUES ("Jantes en aluminium");
+
+INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, ID_marques) VALUES ("50000", "2020", "10000", "URLDETEST",1);
+INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, ID_marques) VALUES ("75000", "2015", "7000", "URLDETEST",2);
+INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, ID_marques) VALUES ("150000", "2010", "5000", "URLDETEST",3);
