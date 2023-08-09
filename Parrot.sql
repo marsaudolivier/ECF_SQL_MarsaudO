@@ -1,6 +1,6 @@
 CREATE TABLE Roles(
    Id_Roles INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-   role VARCHAR NOT NULL(20)
+   role VARCHAR(20) NOT NULL
 );
 CREATE TABLE Services(
     Id_Services INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -9,8 +9,8 @@ CREATE TABLE Services(
 );
 CREATE TABLE Formulaires(
     Id_Formulaires INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR NOT NULL(50),
-    prenom VARCHAR NOT NULL(50),
+    nom VARCHAR(50) NOT NULL,
+    prenom VARCHAR(50) NOT NULL,
     mail VARCHAR(50),
     telephone VARCHAR(13),
     message TEXT NOT NULL
@@ -35,6 +35,7 @@ CREATE TABLE Marques(
 CREATE TABLE Modeles(
     Id_Modeles INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     modele VARCHAR(50),
+    Id_Marques INT NOT NULL,
     FOREIGN KEY(Id_Marques) REFERENCES Marques(Id_Marques)
 );
 CREATE TABLE Energies(
@@ -43,7 +44,7 @@ CREATE TABLE Energies(
 );
 CREATE TABLE Options(
     Id_Options INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    option VARCHAR(50)
+    optionn VARCHAR(50)
 );
 CREATE TABLE Utilisateurs(
     Id_Utilisateurs INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -64,7 +65,7 @@ CREATE TABLE Avis(
     prenom VARCHAR(50),
     commentaire TEXT,
     notes INT,
-    Id_Validations INT NOT NULL?
+    Id_Validations INT NOT NULL,
     FOREIGN KEY(Id_Validations) REFERENCES Validations(Id_Validations)
 );
 CREATE TABLE Voitures(
@@ -73,7 +74,7 @@ CREATE TABLE Voitures(
     annee INT,
     prix DECIMAL(5,0),
     photo_principal VARCHAR(50),
-    Id_Marques NOT NULL,
+    Id_Marques INT NOT NULL,
     FOREIGN KEY(Id_Marques) REFERENCES Marques(Id_Marques)
 );
 CREATE TABLE Photos(
