@@ -21,3 +21,9 @@ Utilisateurs -> Id + nom + prenom + mail + Mot de passe
                 ---> Options -> Id + nom
 
 J'ai ensuite resortie mon MLD et UML.
+
+Création du fichier SQL comportant ensemble des tables.
+
+Création du fichier SQL relatif à la création du compte de MR parrot.
+
+Création de différente données fictive pour le site.
