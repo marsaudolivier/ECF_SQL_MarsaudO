@@ -156,3 +156,5 @@ INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,5);
 INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,6);
 
 INSERT INTO Annonces (titre, date_publication, Id_Voitures) VALUES ("Renault clio 4",CURRENT_TIMESTAMP , 1);
+
+INSERT INTO publier (Id_Utilisateurs, Id_Annonces) VALUES (1 , 1);
