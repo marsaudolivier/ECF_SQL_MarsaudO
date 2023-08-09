@@ -104,13 +104,6 @@ CREATE TABLE poster(
     FOREIGN KEY(Id_Utilisateurs) REFERENCES Utilisateurs(Id_Utilisateurs),
     FOREIGN KEY(Id_Avis) REFERENCES Avis(Id_Avis)
 );
-CREATE TABLE ouvrir(
-    Id_Utilisateurs INT,
-    Id_Jours INT,
-    PRIMARY KEY(Id_Utilisateurs, Id_Jours),
-    FOREIGN KEY(Id_Utilisateurs) REFERENCES Utilisateurs(Id_Utilisateurs),
-    FOREIGN KEY(Id_Jours) REFERENCES Jours(Id_Jours)
-);
 CREATE TABLE durer(
     Id_Jours INT,
     Id_Heures INT,

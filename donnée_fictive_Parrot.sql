@@ -35,10 +35,9 @@ Notre équipe de professionnels est formée pour installer tous les types de boi
 
 Chez Garage V. Parrot, nous sommes convaincus que chaque voiture mérite les meilleurs soins, et c'est pourquoi nous nous engageons à fournir un service de qualité à chaque client. Nous sommes fiers de notre réputation de garage de confiance et nous sommes déterminés à maintenir cette réputation en offrant un service de qualité supérieure à chaque client. ");
 
-INSERT INTO Heures(ouverture, fermeture) VALUES ("8h","12h");
-INSERT INTO Heures(ouverture, fermeture) VALUES ("14h","18h");
-INSERT INTO Heures(ouverture, fermeture) VALUES ("9h","12h");
-INSERT INTO Heures(ouverture, fermeture) VALUES ("15h","19h");
+INSERT INTO Heures(ouverture, fermeture) VALUES ("8h-12h","14h-18h");
+INSERT INTO Heures(ouverture, fermeture) VALUES ("9h-12h","15h-19h");
+INSERT INTO Heures(ouverture, fermeture) VALUES ("9h-12h","fermé");
 INSERT INTO Heures(ouverture, fermeture) VALUES ("fermé","fermé");
 
 INSERT INTO Jours(jour) VALUES ("Lundi");
@@ -48,3 +47,11 @@ INSERT INTO Jours(jour) VALUES ("Jeudi");
 INSERT INTO Jours(jour) VALUES ("Vendredi");
 INSERT INTO Jours(jour) VALUES ("Samedi");
 INSERT INTO Jours(jour) VALUES ("Dimanche");
+
+INSERT INTO durer(Id_Jours,Id_Heures) VALUES (1,1);
+INSERT INTO durer(Id_Jours,Id_Heures) VALUES (2,2);
+INSERT INTO durer(Id_Jours,Id_Heures) VALUES (3,3);
+INSERT INTO durer(Id_Jours,Id_Heures) VALUES (4,2);
+INSERT INTO durer(Id_Jours,Id_Heures) VALUES (5,1);
+INSERT INTO durer(Id_Jours,Id_Heures) VALUES (6,1);
+INSERT INTO durer(Id_Jours,Id_Heures) VALUES (7,4);
