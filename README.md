@@ -18,5 +18,6 @@ Utilisateurs -> Id + nom + prenom + mail + Mot de passe
         ---> Marques -> Id + nom
             ---> Modeles -> Id + nom
                 ---> Energies -> Id + nom
+                ---> Options -> Id + nom
 
 J'ai ensuite resortie mon MLD et UML.
