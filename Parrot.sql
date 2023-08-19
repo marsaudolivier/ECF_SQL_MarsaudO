@@ -20,10 +20,6 @@ CREATE TABLE Validations(
     Id_Validations INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     valider CHAR(3)
 );
-CREATE TABLE Jours(
-    Id_Jours INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    jour VARCHAR(8)UNIQUE NOT NULL
-);
 CREATE TABLE Heures(
     Id_Heures INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Ouverture VARCHAR(20),
@@ -55,6 +51,14 @@ CREATE TABLE Utilisateurs(
     mdp CHAR(60) NOT NULL,
     Id_Roles INT NOT NULL,
     FOREIGN KEY(Id_Roles) REFERENCES Roles(Id_Roles)
+);
+CREATE TABLE Jours(
+    Id_Jours INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    jour VARCHAR(8),
+    Id_Heures INT NOT NULL,
+    Id_Utilisateurs INT NOT NULL,
+    FOREIGN KEY(Id_Heures) REFERENCES Heures(Id_Heures),
+    FOREIGN KEY(Id_Utilisateurs) REFERENCES Utilisateurs(Id_Utilisateurs)
 );
 CREATE TABLE Services(
     Id_Services INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -109,14 +113,6 @@ CREATE TABLE poster(
     PRIMARY KEY(Id_Utilisateurs, Id_Avis),
     FOREIGN KEY(Id_Utilisateurs) REFERENCES Utilisateurs(Id_Utilisateurs),
     FOREIGN KEY(Id_Avis) REFERENCES Avis(Id_Avis)
-);
-CREATE TABLE durer(
-    Id_Jours INT,
-    Id_Heures INT,
-    PRIMARY KEY(Id_Jours, Id_Heures),
-    FOREIGN KEY(Id_Jours) REFERENCES Jours(Id_Jours),
-    FOREIGN KEY(Id_Heures) REFERENCES Heures(Id_Heures),
-    CONSTRAINT UC_Id_Jours UNIQUE (Id_Jours)
 );
 CREATE TABLE publier(
     Id_Utilisateurs INT,

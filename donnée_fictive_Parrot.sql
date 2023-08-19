@@ -31,21 +31,14 @@ INSERT INTO Heures(ouverture, fermeture) VALUES ("9h-12h","15h-19h");
 INSERT INTO Heures(ouverture, fermeture) VALUES ("9h-12h","fermé");
 INSERT INTO Heures(ouverture, fermeture) VALUES ("fermé","fermé");
 
-INSERT INTO Jours(jour) VALUES ("Lundi");
-INSERT INTO Jours(jour) VALUES ("Mardi");
-INSERT INTO Jours(jour) VALUES ("Mercredi");
-INSERT INTO Jours(jour) VALUES ("Jeudi");
-INSERT INTO Jours(jour) VALUES ("Vendredi");
-INSERT INTO Jours(jour) VALUES ("Samedi");
-INSERT INTO Jours(jour) VALUES ("Dimanche");
+INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Lundi",1,1);
+INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Mardi",1,1);
+INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Mercredi",1,1);
+INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Jeudi",1,1);
+INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Vendredi",1,1);
+INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Samedi",1,1);
+INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Dimanche",1,1);
 
-INSERT INTO durer(Id_Jours,Id_Heures) VALUES (1,1);
-INSERT INTO durer(Id_Jours,Id_Heures) VALUES (2,2);
-INSERT INTO durer(Id_Jours,Id_Heures) VALUES (3,3);
-INSERT INTO durer(Id_Jours,Id_Heures) VALUES (4,2);
-INSERT INTO durer(Id_Jours,Id_Heures) VALUES (5,1);
-INSERT INTO durer(Id_Jours,Id_Heures) VALUES (6,1);
-INSERT INTO durer(Id_Jours,Id_Heures) VALUES (7,4);
 
 INSERT INTO Validations(valider) VALUES ("non");
 INSERT INTO Validations(valider) VALUES ("oui");
