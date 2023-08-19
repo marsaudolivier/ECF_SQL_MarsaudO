@@ -161,6 +161,11 @@ INSERT INTO Photos (photo_secondaire, Id_Voitures) VALUES ("uneURLSECONDAIRE", 1
 
 INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsaud', "Olivier", "Très bon garage je recommande", "5", 2);
 INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsaud', "Aurélie", "Test", "3", 1);
+INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Mars', "Aurélie", "Test2", "3", 1);
+INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsatestud', "Aurélie", "Test3", "3", 1);
+INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsautsfdsfsdf', "Aurélie", "Test4", "3", 1);
+INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Mafsd', "Aurélie", "Test5", "3", 1);
+INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Mamar', "Aurélie", "Tes6", "3", 1);
 
 INSERT INTO Motifs (motif) VALUES ("Mécanique auto");
 INSERT INTO Motifs (motif) VALUES ("Carrosserie");

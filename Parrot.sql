@@ -22,7 +22,7 @@ CREATE TABLE Validations(
 );
 CREATE TABLE Jours(
     Id_Jours INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    jour VARCHAR(8)
+    jour VARCHAR(8)UNIQUE NOT NULL
 );
 CREATE TABLE Heures(
     Id_Heures INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -115,7 +115,8 @@ CREATE TABLE durer(
     Id_Heures INT,
     PRIMARY KEY(Id_Jours, Id_Heures),
     FOREIGN KEY(Id_Jours) REFERENCES Jours(Id_Jours),
-    FOREIGN KEY(Id_Heures) REFERENCES Heures(Id_Heures)
+    FOREIGN KEY(Id_Heures) REFERENCES Heures(Id_Heures),
+    CONSTRAINT UC_Id_Jours UNIQUE (Id_Jours)
 );
 CREATE TABLE publier(
     Id_Utilisateurs INT,
