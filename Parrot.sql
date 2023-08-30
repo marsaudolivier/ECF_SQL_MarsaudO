@@ -6,6 +6,16 @@ CREATE TABLE Motifs(
     Id_Motifs INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     motif VARCHAR(50) NOT NULL
 );
+CREATE TABLE Marques(
+    Id_Marques INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    marque VARCHAR(50) NOT NULL
+);
+CREATE TABLE Modeles(
+    Id_Modeles INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    modele VARCHAR(50) NOT NULL,
+    Id_Marques INT NOT NULL,
+    FOREIGN KEY(Id_Marques) REFERENCES Marques(Id_Marques)
+);
 CREATE TABLE Formulaires(
     Id_Formulaires INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL,
@@ -19,21 +29,6 @@ CREATE TABLE Formulaires(
 CREATE TABLE Validations(
     Id_Validations INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     valider CHAR(3)
-);
-CREATE TABLE Heures(
-    Id_Heures INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Ouverture VARCHAR(20),
-    Fermeture VARCHAR(20)
-);
-CREATE TABLE Marques(
-    Id_Marques INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    marque VARCHAR(50) NOT NULL
-);
-CREATE TABLE Modeles(
-    Id_Modeles INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    modele VARCHAR(50) NOT NULL,
-    Id_Marques INT NOT NULL,
-    FOREIGN KEY(Id_Marques) REFERENCES Marques(Id_Marques)
 );
 CREATE TABLE Energies(
     Id_Energies INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -55,9 +50,9 @@ CREATE TABLE Utilisateurs(
 CREATE TABLE Jours(
     Id_Jours INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     jour VARCHAR(8),
-    Id_Heures INT NOT NULL,
+    heure_matin VARCHAR(10),
+    heure_soir VARCHAR(10),
     Id_Utilisateurs INT NOT NULL,
-    FOREIGN KEY(Id_Heures) REFERENCES Heures(Id_Heures),
     FOREIGN KEY(Id_Utilisateurs) REFERENCES Utilisateurs(Id_Utilisateurs)
 );
 CREATE TABLE Services(
@@ -83,7 +78,9 @@ CREATE TABLE Voitures(
     prix DECIMAL(5,0) NOT NULL,
     photo_principal VARCHAR(50) NOT NULL,
     Id_Marques INT NOT NULL,
-    FOREIGN KEY(Id_Marques) REFERENCES Marques(Id_Marques)
+    Id_Modeles INT NOT NULL,
+    FOREIGN KEY (Id_Marques) REFERENCES Marques(Id_Marques),
+    FOREIGN KEY (Id_Modeles) REFERENCES Modeles(Id_Modeles)
 );
 CREATE TABLE Photos(
     Id_Photos INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

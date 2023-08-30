@@ -26,18 +26,15 @@ Notre équipe de professionnels est formée pour installer tous les types de boi
 
 Chez Garage V. Parrot, nous sommes convaincus que chaque voiture mérite les meilleurs soins, et c'est pourquoi nous nous engageons à fournir un service de qualité à chaque client. Nous sommes fiers de notre réputation de garage de confiance et nous sommes déterminés à maintenir cette réputation en offrant un service de qualité supérieure à chaque client. ");
 
-INSERT INTO Heures(ouverture, fermeture) VALUES ("8h-12h","14h-18h");
-INSERT INTO Heures(ouverture, fermeture) VALUES ("9h-12h","15h-19h");
-INSERT INTO Heures(ouverture, fermeture) VALUES ("9h-12h","fermé");
-INSERT INTO Heures(ouverture, fermeture) VALUES ("fermé","fermé");
+INSERT INTO Jours(jour, heure_matin,heure_soir, Id_Utilisateurs) VALUES ("Lundi",'8h-12h', '14h-18h',1);
+INSERT INTO Jours(jour, heure_matin,heure_soir, Id_Utilisateurs) VALUES ("Mardi",'8h-12h', '14h-18h',1);
+INSERT INTO Jours(jour, heure_matin,heure_soir, Id_Utilisateurs) VALUES ("Mercredi",'8h-12h', 'fermé',1);
+INSERT INTO Jours(jour, heure_matin,heure_soir, Id_Utilisateurs) VALUES ("Jeudi",'8h-12h', '14h-18h',1);
+INSERT INTO Jours(jour, heure_matin,heure_soir, Id_Utilisateurs) VALUES ("Vendredi",'8h-12h', '14h-18h',1);
+INSERT INTO Jours(jour, heure_matin,heure_soir, Id_Utilisateurs) VALUES ("Samedi",'8h-12h', '14h-18h',1);
+INSERT INTO Jours(jour, heure_matin,heure_soir, Id_Utilisateurs) VALUES ("Dimanche",'fermé', 'fermé',1);
 
-INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Lundi",1,1);
-INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Mardi",1,1);
-INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Mercredi",1,1);
-INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Jeudi",1,1);
-INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Vendredi",1,1);
-INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Samedi",1,1);
-INSERT INTO Jours(jour, Id_Heures, Id_Utilisateurs) VALUES ("Dimanche",1,1);
+
 
 
 INSERT INTO Validations(valider) VALUES ("non");
@@ -132,21 +129,18 @@ INSERT INTO Options(optionn) VALUES ("Volant en cuir");
 INSERT INTO Options(optionn) VALUES ("Volant chauffant");
 INSERT INTO Options(optionn) VALUES ("Jantes en aluminium");
 
-INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, ID_marques) VALUES ("50000", "2020", "10000", "URLDETEST",1);
-INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, ID_marques) VALUES ("75000", "2015", "7000", "URLDETEST",2);
-INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, ID_marques) VALUES ("150000", "2010", "5000", "URLDETEST",3);
+INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, Id_Marques, Id_Modeles) VALUES ("50000", "2020", "10000", "URLDETEST",1,2);
+INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, Id_Marques, Id_Modeles) VALUES ("50000", "2020", "10000", "URLDETEST",2,2);
+INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, Id_Marques, Id_Modeles) VALUES ("50000", "2020", "10000", "URLDETEST",3,3);
 
 INSERT INTO consommer(Id_Modeles, Id_Energies) VALUES (1,1);
 INSERT INTO consommer(Id_Modeles, Id_Energies) VALUES (1,2);
 
-INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,1);
-INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,2);
-INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,3);
-INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,4);
-INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,5);
-INSERT INTO avoir (Id_Modeles, Id_Options) VALUES (1,6);
+
 
 INSERT INTO Annonces (titre, date_publication, Id_Voitures) VALUES ("Renault clio 4",CURRENT_TIMESTAMP , 1);
+INSERT INTO Annonces (titre, date_publication, Id_Voitures) VALUES ("Renault clio 4",CURRENT_TIMESTAMP , 2);
+INSERT INTO Annonces (titre, date_publication, Id_Voitures) VALUES ("Renault clio 4",CURRENT_TIMESTAMP , 3);
 
 INSERT INTO publier (Id_Utilisateurs, Id_Annonces) VALUES (1 , 1);
 
