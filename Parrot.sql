@@ -119,16 +119,16 @@ CREATE TABLE publier(
     FOREIGN KEY(Id_Annonces) REFERENCES Annonces(Id_Annonces)
 );
 CREATE TABLE consommer(
-    Id_Modeles INT,
+    Id_Voitures INT,
     Id_Energies INT,
-    PRIMARY KEY(Id_Modeles, Id_Energies),
-    FOREIGN KEY(Id_Modeles) REFERENCES Modeles(Id_Modeles),
+    PRIMARY KEY(Id_Voitures, Id_Energies),
+    FOREIGN KEY(Id_Voitures) REFERENCES Voitures(Id_Voitures),
     FOREIGN KEY(Id_Energies) REFERENCES Energies(Id_Energies)
 );
 CREATE TABLE avoir(
-    Id_Modeles INT,
+    Id_Voitures INT,
     Id_Options INT,
-    PRIMARY KEY(Id_Modeles, Id_Options),
-    FOREIGN KEY(Id_Modeles) REFERENCES Modeles(Id_Modeles),
+    PRIMARY KEY(Id_Voitures, Id_Options),
+    FOREIGN KEY(Id_Voitures) REFERENCES Voitures(Id_Voitures),
     FOREIGN KEY(Id_Options) REFERENCES Options(Id_Options)
 );

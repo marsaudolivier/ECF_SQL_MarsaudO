@@ -133,14 +133,14 @@ INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, Id_Marques, Id_M
 INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, Id_Marques, Id_Modeles) VALUES ("50000", "2020", "10000", "URLDETEST",2,2);
 INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, Id_Marques, Id_Modeles) VALUES ("50000", "2020", "10000", "URLDETEST",3,3);
 
-INSERT INTO consommer(Id_Modeles, Id_Energies) VALUES (1,1);
-INSERT INTO consommer(Id_Modeles, Id_Energies) VALUES (1,2);
+INSERT INTO consommer(Id_Voitures, Id_Energies) VALUES (1,1);
+INSERT INTO consommer(Id_Voitures, Id_Energies) VALUES (1,2);
 
 
 
 INSERT INTO Annonces (titre, date_publication, Id_Voitures) VALUES ("Renault clio 4",CURRENT_TIMESTAMP , 1);
-INSERT INTO Annonces (titre, date_publication, Id_Voitures) VALUES ("Renault clio 4",CURRENT_TIMESTAMP , 2);
-INSERT INTO Annonces (titre, date_publication, Id_Voitures) VALUES ("Renault clio 4",CURRENT_TIMESTAMP , 3);
+INSERT INTO Annonces (titre, date_publication, Id_Voitures) VALUES ("Renault cliteto 4",CURRENT_TIMESTAMP , 2);
+INSERT INTO Annonces (titre, date_publication, Id_Voitures) VALUES ("Renault clio ddsdsdsds",CURRENT_TIMESTAMP , 3);
 
 INSERT INTO publier (Id_Utilisateurs, Id_Annonces) VALUES (1 , 1);
 
@@ -161,3 +161,7 @@ INSERT INTO Motifs (motif) VALUES ("Vehicule à vendre");
 INSERT INTO Motifs (motif) VALUES ("Autre");
 
 INSERT INTO Formulaires(nom, prenom, mail, telephone, message, Id_Motifs) VALUES ("Pouplin", "Joseph", "jojo@hotmail.com", "0600000000", "Pouvez vous me contacter pour un entretien sur une 2008", 1);
+
+INSERT INTO avoir (Id_Voitures, Id_Options) VALUES (1,1) ;
+INSERT INTO avoir (Id_Voitures, Id_Options) VALUES (1,2) ;
+INSERT INTO avoir (Id_Voitures, Id_Options) VALUES (1,3) ;
