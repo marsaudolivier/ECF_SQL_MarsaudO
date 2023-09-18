@@ -16,6 +16,10 @@ CREATE TABLE Modeles(
     Id_Marques INT NOT NULL,
     FOREIGN KEY(Id_Marques) REFERENCES Marques(Id_Marques)
 );
+CREATE TABLE FormulairesOk(
+    Id_FormulairesOk INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    etat VARCHAR(50) NOT NULL
+);
 CREATE TABLE Formulaires(
     Id_Formulaires INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL,
@@ -23,8 +27,11 @@ CREATE TABLE Formulaires(
     mail VARCHAR(50),
     telephone VARCHAR(13),
     message TEXT NOT NULL,
+    annonce TEXT NOT NULL,
     Id_Motifs INT NOT NULL,
-    FOREIGN KEY(Id_Motifs) REFERENCES Motifs(Id_Motifs)
+    Id_FormulairesOk INT NOT NULL,
+    FOREIGN KEY(Id_Motifs) REFERENCES Motifs(Id_Motifs),
+    FOREIGN KEY(Id_FormulairesOk) REFERENCES FormulairesOk(Id_FormulairesOk)
 );
 CREATE TABLE Validations(
     Id_Validations INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -95,13 +102,6 @@ CREATE TABLE Annonces(
     Id_Voitures INT NOT NULL,
     UNIQUE(Id_Voitures),
     FOREIGN KEY(Id_Voitures) REFERENCES Voitures(Id_Voitures)
-);
-CREATE TABLE gerer(
-    Id_Utilisateurs INT,
-    Id_Formulaires INT,
-    PRIMARY KEY(Id_Utilisateurs, Id_Formulaires),
-    FOREIGN KEY(Id_Utilisateurs) REFERENCES Utilisateurs(Id_Utilisateurs),
-    FOREIGN KEY(Id_Formulaires) REFERENCES Formulaires(Id_Formulaires)
 );
 
 CREATE TABLE poster(

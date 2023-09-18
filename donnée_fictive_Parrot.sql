@@ -1,3 +1,4 @@
+
 INSERT INTO Services(Id_Utilisateurs, titre, description) VALUES (1,'Réparation Automobile', "Chez Garage V. Parrot, nous sommes fiers de notre expertise en matière de réparation automobile. Nous avons une équipe de professionnels expérimentés qui sont formés pour travailler sur tous les types de voitures, des plus anciennes aux plus récentes. Nous sommes équipés des dernières technologies et des outils les plus performants pour garantir un travail de qualité et une réparation rapide et efficace.
 
 Nous comprenons que la réparation d'une voiture peut être stressante et coûteuse. C'est pourquoi nous offrons à nos clients un service personnalisé et transparent, avec des devis clairs et des explications détaillées sur les travaux à effectuer. Nous sommes également à l'écoute de nos clients et nous nous engageons à répondre à toutes leurs questions et à leurs préoccupations.
@@ -33,8 +34,6 @@ INSERT INTO Jours(jour, heure_matin,heure_soir, Id_Utilisateurs) VALUES ("Jeudi"
 INSERT INTO Jours(jour, heure_matin,heure_soir, Id_Utilisateurs) VALUES ("Vendredi",'8h-12h', '14h-18h',1);
 INSERT INTO Jours(jour, heure_matin,heure_soir, Id_Utilisateurs) VALUES ("Samedi",'8h-12h', '14h-18h',1);
 INSERT INTO Jours(jour, heure_matin,heure_soir, Id_Utilisateurs) VALUES ("Dimanche",'fermé', 'fermé',1);
-
-
 
 
 INSERT INTO Validations(valider) VALUES ("non");
@@ -128,24 +127,6 @@ INSERT INTO Options(optionn) VALUES ("Sièges semi-cuir");;
 INSERT INTO Options(optionn) VALUES ("Volant en cuir");
 INSERT INTO Options(optionn) VALUES ("Volant chauffant");
 INSERT INTO Options(optionn) VALUES ("Jantes en aluminium");
-
-INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, Id_Marques, Id_Modeles) VALUES ("50000", "2020", "10000", "URLDETEST",1,2);
-INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, Id_Marques, Id_Modeles) VALUES ("50000", "2020", "10000", "URLDETEST",2,2);
-INSERT INTO Voitures(kilometrage, annee, prix, photo_principal, Id_Marques, Id_Modeles) VALUES ("50000", "2020", "10000", "URLDETEST",3,3);
-
-INSERT INTO consommer(Id_Voitures, Id_Energies) VALUES (1,1);
-INSERT INTO consommer(Id_Voitures, Id_Energies) VALUES (1,2);
-
-
-
-INSERT INTO Annonces (titre, date_publication, Id_Voitures) VALUES ("Renault clio 4",CURRENT_TIMESTAMP , 1);
-INSERT INTO Annonces (titre, date_publication, Id_Voitures) VALUES ("Renault cliteto 4",CURRENT_TIMESTAMP , 2);
-INSERT INTO Annonces (titre, date_publication, Id_Voitures) VALUES ("Renault clio ddsdsdsds",CURRENT_TIMESTAMP , 3);
-
-INSERT INTO publier (Id_Utilisateurs, Id_Annonces) VALUES (1 , 1);
-
-INSERT INTO Photos (photo_secondaire, Id_Voitures) VALUES ("uneURLSECONDAIRE", 1);
-
 INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsaud', "Olivier", "Très bon garage je recommande", "5", 2);
 INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Marsaud', "Aurélie", "Test", "3", 1);
 INSERT INTO Avis (nom, prenom, commentaire, note, Id_Validations) VALUES ('Mars', "Aurélie", "Test2", "3", 1);
@@ -160,8 +141,8 @@ INSERT INTO Motifs (motif) VALUES ("Peinture");
 INSERT INTO Motifs (motif) VALUES ("Vehicule à vendre");
 INSERT INTO Motifs (motif) VALUES ("Autre");
 
-INSERT INTO Formulaires(nom, prenom, mail, telephone, message, Id_Motifs) VALUES ("Pouplin", "Joseph", "jojo@hotmail.com", "0600000000", "Pouvez vous me contacter pour un entretien sur une 2008", 1);
+INSERT INTO FormulairesOk (etat) VALUES ('Non Traité')
+INSERT INTO FormulairesOk (etat) VALUES ('en cours')
+INSERT INTO FormulairesOk (etat) VALUES ('Traité')
 
-INSERT INTO avoir (Id_Voitures, Id_Options) VALUES (1,1) ;
-INSERT INTO avoir (Id_Voitures, Id_Options) VALUES (1,2) ;
-INSERT INTO avoir (Id_Voitures, Id_Options) VALUES (1,3) ;
+INSERT INTO Formulaires(nom, prenom, mail, telephone, message, Id_Motifs, Id_FormulairesOk) VALUES ("Pouplin", "Joseph", "jojo@hotmail.com", "0600000000", "Pouvez vous me contacter pour un entretien sur une 2008", 1, 1);
