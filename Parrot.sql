@@ -52,6 +52,7 @@ CREATE TABLE Utilisateurs(
     mail VARCHAR(50) NOT NULL,
     mdp CHAR(60) NOT NULL,
     Id_Roles INT NOT NULL,
+    token char(80),
     FOREIGN KEY(Id_Roles) REFERENCES Roles(Id_Roles)
 );
 CREATE TABLE Jours(
@@ -132,3 +133,5 @@ CREATE TABLE avoir(
     FOREIGN KEY(Id_Voitures) REFERENCES Voitures(Id_Voitures),
     FOREIGN KEY(Id_Options) REFERENCES Options(Id_Options)
 );
+INSERT INTO Roles(role) VALUES ('Administrateur');
+INSERT INTO Roles(role) VALUES ('Employé');
