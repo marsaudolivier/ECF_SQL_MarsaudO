@@ -10,10 +10,10 @@ Il sera important utilisé le fichiez sur un lecteur PHP(wamp, mamp ou autre ) c
 
 De plus il sera important avant de rentré les données local ou distant celon comment vous allez installé votre base de donnée.
 
-> Mdp : MrParrotTest!2023 
 >Mail de connection : garageparot@mail.fr
+>Mot de passe: <PASSWORD> 
 
-Enseuite il sera possible de rajouté des donnée fictive pour le reste des pages avec "donnée_fictive_Parrot.sql"
+Ensuite il sera possible de rajouté des donnée fictive pour le reste des pages avec "donnée_fictive_Parrot.sql"
 
 Merci a vous
 
