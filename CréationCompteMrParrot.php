@@ -1,5 +1,5 @@
 <?php
-$mdp = "";// ici votre mot de passe exemple MrParrotTest!2023
+$mdp = "";// ici votre mot de passe exemple MrParrotTest!
 $mdpHash = password_hash($mdp, PASSWORD_DEFAULT);
 //Pour configuré votre serveur veuillez remplir le nom de la DB , l'utilisateur, le mot de pass, host et le port utilisé
 $dbname = 'marsaudolivier_garageparrot';// ici le db name marsaudolivier_garageparrot 
